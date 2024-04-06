@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>JavaScript Assignment</title>
+	</head>
+
+<body>
+	
+<h1>Assignment 4 Solution</h1>
+
+<script>
+
+
+(function (window) {
+var helloSpeaker = {};
+helloSpeaker.name = 'names';
+  console.log('Hello ' + helloSpeaker.name);
+
+
+
+window.helloSpeaker = helloSpeaker;
+})(window);
+
+helloSpeaker.sayHello();
+
+
+(function (window) {
+var goodByeSpeaker = {};
+goodByeSpeaker.name = 'names';
+goodByeSpeaker.sayGoodBye = function (){
+  console.log('Goodbye ' + goodByeSpeaker.name);
+}
+window.goodByeSpeaker = goodByeSpeaker;
+})(window);
+
+goodByeSpeaker.sayGoodBye();
+
+
+
+
+
+var names = ["Yaakov", "John", "Jen", "Jason", "Paul", 
+"Frank", "Larry", "Paula", "Laura", "Jim"];
+// Just change Goodbye to SpeakWord
+var myFunc = function (letter) { 
+for (var i = 0; i < letter.length; i++) { 
+if (letter[i].charAt(0) == 'j' || letter[i].charAt(0)=='J') { 
+console.log(speakWord + names[i]); 
+} 
+if (letter[i].charAt(0) != 'j' && letter[i].charAt(0)!='J') {
+console.log(speakWord + names[i]); }
+ } 
+ } 
+
+
+helloSpeaker.sayHello();
+goodByeSpeaker.sayGoodBye();
+
+
+</script>
+</body>
+</html>
